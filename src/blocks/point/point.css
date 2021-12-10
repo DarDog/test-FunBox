@@ -1,0 +1,15 @@
+.point {
+  font-weight: 600;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 19px;
+  letter-spacing: .02em;
+  color: #282846;
+  min-height: 22px;
+  cursor: pointer;
+}
+
+.point:hover .point__delete-button {
+  visibility: visible;
+  opacity: 1;
+}
