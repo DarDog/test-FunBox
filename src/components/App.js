@@ -5,7 +5,13 @@ import { YMaps } from "react-yandex-maps";
 
 const App = () => {
   return (
-    <YMaps>
+    <YMaps
+      query={{
+        ns: 'use-load-option',
+        load:
+          'Map,Placemark,control.ZoomControl,geoObject.addon.balloon',
+      }}
+    >
       <div className={ 'root' }>
         <main className={ 'page' }>
           <Interface/>
