@@ -9,13 +9,22 @@ const Interface = () => {
     setPoints([...points, newPoint])
   }
 
+  const handleDeletePoint = id => {
+    setPoints(state =>
+      state.filter(point =>
+        point._id === id ? point.remove : point))
+  }
+
   return (
-    <section className={'interface'}>
+    <section className={ 'interface' }>
       <PointInput
-        addNewPoint={handleAddNewPoint}
-        pointsLength={points.length}
+        addNewPoint={ handleAddNewPoint }
+        pointsLength={ points.length }
       />
-      <Points points={points} />
+      <Points
+        points={ points }
+        onDelete={ handleDeletePoint }
+      />
     </section>
   );
 }
