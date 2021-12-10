@@ -11,7 +11,7 @@ const PointInput = (props) => {
     evt.preventDefault();
 
     setPointName('')
-    props.addNewPoint({
+    props.onAdd({
       _id: Date.now(),
       order: Date.now(),
       name: pointName,

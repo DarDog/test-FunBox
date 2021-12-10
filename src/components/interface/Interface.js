@@ -1,29 +1,17 @@
-import React, { useState } from 'react';
+import React from 'react';
 import PointInput from "./PointInput";
 import Points from "./Points";
 
-const Interface = () => {
-  const [points, setPoints] = useState([]);
-
-  const handleAddNewPoint = newPoint => {
-    setPoints([...points, newPoint])
-  }
-
-  const handleDeletePoint = id => {
-    setPoints(state =>
-      state.filter(point =>
-        point._id === id ? point.remove : point))
-  }
-
+const Interface = (props) => {
   return (
     <section className={ 'interface' }>
       <PointInput
-        addNewPoint={ handleAddNewPoint }
+        onAdd={ props.onAddPoint }
       />
       <Points
-        points={ points }
-        onDelete={ handleDeletePoint }
-        onOrderChange={ setPoints }
+        points={ props.points }
+        onDelete={ props.onDeletePoint }
+        onOrderChange={ props.onChangePoints }
       />
     </section>
   );
