@@ -12,7 +12,7 @@ const PointInput = (props) => {
 
     setPointName('')
     props.addNewPoint({
-      _id: props.pointsLength,
+      _id: Date.now(),
       name: pointName,
     })
   }

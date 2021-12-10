@@ -15,11 +15,12 @@ const Interface = () => {
         point._id === id ? point.remove : point))
   }
 
+  console.log(points)
+
   return (
     <section className={ 'interface' }>
       <PointInput
         addNewPoint={ handleAddNewPoint }
-        pointsLength={ points.length }
       />
       <Points
         points={ points }
