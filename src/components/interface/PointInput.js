@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 
-const PointInput = () => {
+const PointInput = (props) => {
   const [pointName, setPointName] = useState('')
 
   const handleChange = evt => {
@@ -11,7 +11,10 @@ const PointInput = () => {
     evt.preventDefault();
 
     setPointName('')
-      //TODO создавать объект точки с уникальным ID и отправлять в список точек
+    props.addNewPoint({
+      _id: props.pointsLength,
+      name: pointName,
+    })
   }
 
   return (

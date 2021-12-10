@@ -1,13 +1,18 @@
 import React from 'react';
 import Point from "./Point";
 
-const Points = () => {
+const Points = ({ points }) => {
   return (
     <article className="container">
       <ul className="list list__points">
-        <Point />
-        <Point />
-        <Point />
+        {
+          points.map(point => {
+            return <Point
+              key={point._id}
+              point={point}
+            />
+          })
+        }
       </ul>
     </article>
   );

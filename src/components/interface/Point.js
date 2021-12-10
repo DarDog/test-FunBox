@@ -1,8 +1,8 @@
 import React from 'react';
 
-const Point = () => {
+const Point = ({ point }) => {
   return (
-    <li className="list__item point">пр. Победы 91<button className={"point__delete-button"} /></li>
+    <li className="list__item point">{point.name}<button className={"point__delete-button"} /></li>
   );
 }
 
