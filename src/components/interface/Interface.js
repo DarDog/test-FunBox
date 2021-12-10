@@ -23,6 +23,7 @@ const Interface = () => {
       <Points
         points={ points }
         onDelete={ handleDeletePoint }
+        onOrderChange={ setPoints }
       />
     </section>
   );
