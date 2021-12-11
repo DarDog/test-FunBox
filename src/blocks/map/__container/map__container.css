@@ -1,7 +1,10 @@
 .map__container {
+  display: block;
+  height: 100%;
+  width: 100%;
   min-width: 500px;
   min-height: 500px;
   margin-left: 30px;
-  justify-content: center;
-  align-items: center;
+  max-width: 800px;
+  max-height: 600px;
 }

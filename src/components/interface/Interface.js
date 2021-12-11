@@ -7,6 +7,7 @@ const Interface = (props) => {
     <section className={ 'interface' }>
       <PointInput
         onAdd={ props.onAddPoint }
+        coords={ props.coords }
       />
       <Points
         points={ props.points }

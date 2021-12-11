@@ -15,6 +15,7 @@ const PointInput = (props) => {
       _id: Date.now(),
       order: Date.now(),
       name: pointName,
+      coords: props.coords
     })
   }
 
