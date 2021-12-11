@@ -14,6 +14,7 @@
 
 @import url('./blocks/list/list.css');
 @import url('./blocks/list/__item/list__item.css');
+@import url('./blocks/list/__item/_hovered_true/list__item_hovered_true.css');
 
 @import url('./blocks/point/point.css');
 @import url('./blocks/point/__delete-button/point__delete-button.css');

@@ -1,9 +1,10 @@
 .page {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   width: 100%;
   max-width: 1440px;
-  height: 100vh;
   background-color: #fafafa;
+  height: 100vh;
+  overflow: hidden;
 }
