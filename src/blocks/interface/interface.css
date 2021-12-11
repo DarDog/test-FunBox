@@ -1,5 +1,17 @@
 .interface {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
+}
+
+@media screen and (max-width: 769px) {
+  .interface {
+    position: absolute;
+    left: -266px;
+    height: 100%;
+    z-index: 100;
+    width: 266px;
+    background-color: rgba(40, 40, 70, 0.8);
+    transition: left 1s;
+  }
 }

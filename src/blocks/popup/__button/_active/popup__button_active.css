@@ -1,0 +1,5 @@
+.popup__button_active {
+  transform: rotate(180deg);
+  border-radius: 40px 0 0 40px;
+  left: 266px;
+}

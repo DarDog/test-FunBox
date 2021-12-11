@@ -1,6 +1,12 @@
 .map__container {
   display: block;
   max-width: 1000px;
-  margin-left: 30px;
+  margin-left: 20px;
   max-height: calc(100vh - 90px);
+}
+
+@media screen and (max-width: 768px){
+  .map__container {
+    margin-left: 10px;
+  }
 }

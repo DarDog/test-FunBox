@@ -7,4 +7,5 @@
   background-color: #fafafa;
   height: 100vh;
   overflow: hidden;
+  position: relative;
 }

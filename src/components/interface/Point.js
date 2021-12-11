@@ -15,7 +15,7 @@ const Point = ({ point, ...props }) => {
       onDragOver={evt => props.over(evt)}
       onDrop={evt => props.drop(evt, point)}
     >{point.name}
-    <button className={"point__delete-button"} onClick={handleClick} />
+    <button className={"point__delete-button button"} onClick={handleClick} />
     </li>
   );
 }

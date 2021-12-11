@@ -5,7 +5,8 @@ import { YMaps } from "react-yandex-maps";
 
 const App = () => {
   const [points, setPoints] = useState([]);
-  const [coords, setCoords] = useState([55.76, 37.64])
+  const [coords, setCoords] = useState([55.76, 37.64]);
+  const [popupIsOpen, setPopupIsOpen] = useState(false);
 
   const handleAddNewPoint = newPoint => {
     setPoints([...points, newPoint])
@@ -19,6 +20,11 @@ const App = () => {
 
   const handleUpdatePointsCoords = (newPoint) => {
     setPoints((state) => state.map((p) => p._id === newPoint._id ? newPoint : p));
+  }
+
+  const handlePopupButtonClick = () => {
+    setPopupIsOpen(!popupIsOpen)
+    console.log('click')
   }
 
   return (
@@ -36,6 +42,7 @@ const App = () => {
             onDeletePoint={ handleDeletePoint }
             onChangePoints={ setPoints }
             coords={ coords }
+            popupIsOpen={ popupIsOpen }
           />
           <MyMap
             points={ points }
@@ -43,6 +50,8 @@ const App = () => {
             setCoords={ setCoords }
             onCoordsChange={ handleUpdatePointsCoords }
           />
+          <div className={ `popup ${popupIsOpen && 'popup_open'}` }/>
+          <button onClick={handlePopupButtonClick} className={`button popup__button ${popupIsOpen && 'popup__button_active'}`} type={'button'} />
         </main>
       </div>
     </YMaps>

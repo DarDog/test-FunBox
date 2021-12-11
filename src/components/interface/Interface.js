@@ -4,7 +4,7 @@ import Points from "./Points";
 
 const Interface = (props) => {
   return (
-    <section className={ 'interface' }>
+    <section className={ `interface ${props.popupIsOpen && 'interface_visibility_visible' }` }>
       <PointInput
         onAdd={ props.onAddPoint }
         coords={ props.coords }
