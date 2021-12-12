@@ -1,70 +1,108 @@
-# Getting Started with Create React App
+# Тестовое задание для FunBox
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Запуск приложения:
 
-## Available Scripts
+* Клонируйте репозиторий:
 
-In the project directory, you can run:
+         git@github.com:DarDog/test-FunBox.git
 
-### `yarn start`
+* Перейдите в директорию проекта и установите зависимости: 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+        npm install
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+* Запуск проекта на локальном сервере и запуск тестов:
 
-### `yarn test`
+        npm run start
+        npm run test
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Так же вы можете посмотреть приложение [тут](https://dardog.github.io/test-FunBox/).
+___
 
-### `yarn build`
+## Вопросы и ответы
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Q1
+Расскажите, чем, на ваш взгляд, отличается хорошее клиентское приложение от
+плохого с точки зрения 
+* Пользователя;
+* Менеджера проекта;
+* Дизайнера;
+* Верстальщика;
+* Серверного программиста.
+### A1
+* Пользователя: 
+  * Удобство. Приложение должно быть приятным в использование, быть отзывчивым и интуитивно понятном, оно должно быть быстрым.
+* Менеджера проекта:
+  * Приложение должно отвечать запросом бизнеса в лице заказчика. Оно должно быть стабильным и фактор неожиданного поведения должен быть сведен к минимуму. Приложение должно быть написано "чисто", для того что-бы новые сотрудники могли быстро влиться в работу.
+* Дизайнера:
+  * Приложение должно привлекать новых пользователей и удерживать тех кто им пользуется. Оно должно быть приятным как и внешне так и в использование.
+* Верстальщика:
+  * Приложение должно быть написано "чисто", для быстрой ориентации в нем. Разбито на компоненты для возможности их повторного использования. Сущности должны быть прописаны явно. Должны поддерживаться архитектура и кодстаил.
+* Серверного программиста:
+  * Приложение должно быть защищенным и оптимизированным. Запросы приложения должны быть корректно описаны и соответствовать друг другу на бэке и фронте.
+___
+### Q2
+Опишите основные особенности разработки крупных многостраничных сайтов,
+функциональность которых может меняться в процессе реализации и поддержки.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Расскажите о своем опыте работы над подобными сайтами: какие подходы,
+инструменты и технологии вы применяли на практике, с какими проблемами
+сталкивались и как их решали. 
+### A2
+Не имею опыта работы с проектами такого вида, но могу предположить что:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Подобные проекты имеют долгую историю разработки. И как следствие могут действовать различные технологии в разных частях кода. Так же на таких проектах должно быть не мало легаси и на этот случай должна быть подробно описанная документация. Скорее всего некоторых сотрудников которые работали над этим проектом раньше уже нет в компании, а значит эти части кода наиболее подвержены ошибкам при изменение. Желательно что бы в таких условиях были: тесты, дока, единая архитектура.
+___
+###Q3
+При разработке интерфейсов с использованием компонентной архитектуры часто
+используются термины Presentational Сomponents и Сontainer Сomponents. Что
+означают данные термины? Зачем нужно такое разделение, какие у него есть плюсы и
+минусы? 
+###A3
+Presentational Сomponents и Сontainer Сomponents. Это компоненты отвечающие за обработку и отрисовку данных. Presentational не имеет состояний и его основным назначением является отрисовка полученных данных. Сontainer же в свою очередь отвечает за управление на данными. Данный подход позволяет переиспользовать Presentational компоненты в разных частях кода. Подход с использованием данного подхода позволяет придерживать паттерна DRY.
+___
+###Q4
+Как устроено наследование в JS? Расскажите о своем опыте реализации JSнаследования без использования фреймворков. 
+###A4
+В JS все является объектами и у всех объектов есть свойство __proto__. Оно позволяет одному объекту обращаться к свойствам другого. С его помощью несколько объектов можно объединить в цепочку. И если свойство или метод не найдены в самом объекте js продолжит их искать через свойство proto. Имею опыт создания классов что по сути является удобным способом записи функции-конструктора построенной на использование proto.
+___
+###Q5
+Какие библиотеки можно использовать для написания тестов end-to-end во
+фронтенде? Расскажите о своем опыте тестирования веб-приложений.
+###A5
+К моему сожалению еще не имею релевантного опыта написания тестов.
+___
+###Q6
+Вам нужно реализовать форму для отправки данных на сервер, состоящую из
+нескольких шагов. В вашем распоряжении дизайн формы и статичная верстка, в
+которой не показано, как форма должна работать в динамике. Подробного описания,
+как должны вести себя различные поля в зависимости от действий пользователя, в
+требованиях к проекту нет. Ваши действия?
+###A6
+Необходимо уточнить все неясности перед тем как приступить к работе, То что я реализую не зная всей картины может оказаться вообще ненужно, а значит я потратил рабочее место в пустую.
+___
+###Q7
+Расскажите, какие инструменты помогают вам экономить время в процессе
+написания, проверки и отладки кода. 
+###A7
+Я использую девкит браузера, так же у меня есть расширение для профилирования React. Еще мне сильно помогает IDE от JetBrains.
+___
+###Q8
+Какие ресурсы вы используете для развития в профессиональной сфере? Приведите
+несколько конкретных примеров (сайты, блоги и так далее).
 
-### `yarn eject`
+Какие ещё области знаний, кроме тех, что непосредственно относятся к работе, вам
+интересны?
+###A8
+Из того к чему я активно обращаюсь это MDN, StackOverflow, Habr. Так же Дока к тем технологиям которыми пользуюсь. В основах мне помогли разобраться курсы от яндекса. Так же смотрю youtuve каналы Сергея Немчинского и JavaScript.Ninja
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+В рамках хоби я увлекаюсь фотографией и настольными играми наподобие DND, Серп, Ужас Аркхэма.
+___
+###Q9
+Расскажите нам немного о себе и предоставьте несколько ссылок на последние работы, выполненные вами.
+###A9
+Меня зовут Влад, мне 24 года, я будущий специалист в web-разработке. В настоящий момент завершаю обучение на курсах от яндекса. Все работы на курсах сданы без срывов дедлайна и считаю что Дипломную работу так же напишу без проблем. Живу на Сахалине и рассчитываю найти работу с Удаленным форматом работы, т.к. не имею возможности к переезду в данный момент. Энергичен, Общителен, Неконфликтен. Ранее имел опыт работы в местной розничной компании в коммерческом отделе на должности оператора 1С.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Мои последние проекты:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+* https://github.com/DarDog/react-mesto-api-full проект с курсов. Реализованы фронт и деплой на удаленный сервер.
+* https://github.com/DarDog/ToDoWebApp собственный проект task manager 
