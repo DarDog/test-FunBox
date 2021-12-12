@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Interface from "./interface/Interface";
-import MyMap from "./Map";
+import MyMap from "./MyMap";
 import { YMaps } from "react-yandex-maps";
 
 const App = () => {
