@@ -1,6 +1,8 @@
 import React from 'react';
 
 const Point = ({ point, ...props }) => {
+  if (!point) return null
+
   const handleClick = () => {
     props.onDelete(point._id)
   }
