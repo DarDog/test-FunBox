@@ -21,7 +21,7 @@ const PointInput = (props) => {
 
   return (
     <article className="container">
-      <form onSubmit={handleSubmit} className="form">
+      <form onSubmit={handleSubmit} className="form" name={'addPointForm'}>
         <input value={pointName} onChange={handleChange} type="text" className="form__input"/>
       </form>
     </article>
