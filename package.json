@@ -2,7 +2,7 @@
   "name": "test-fun-box",
   "version": "0.1.0",
   "private": true,
-  "home": "https://dardog.github.io/test-FunBox/",
+  "homepage": "https://dardog.github.io/test-FunBox/",
   "dependencies": {
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
