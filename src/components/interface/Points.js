@@ -4,6 +4,8 @@ import Point from "./Point";
 const Points = ({ points, ...props }) => {
   const [draggablePoint, setDraggablePoint] = useState({});
 
+  if (!points) return null
+
   const handleDragStart = (evt, point) => {
         setDraggablePoint(point)
   }
