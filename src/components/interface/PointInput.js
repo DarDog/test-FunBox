@@ -22,7 +22,7 @@ const PointInput = (props) => {
   return (
     <article className="container">
       <form onSubmit={handleSubmit} className="form" name={'addPointForm'}>
-        <input value={pointName} onChange={handleChange} type="text" className="form__input"/>
+        <input value={pointName} onChange={handleChange} type="text" className="form__input" required placeholder={'Введите название вашей точки'}/>
       </form>
     </article>
   );
